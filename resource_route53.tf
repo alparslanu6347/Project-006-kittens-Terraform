@@ -1,5 +1,5 @@
 data "aws_route53_zone" "hosted-zone" {
-  name         = "devopsarrow.com."   // write your hosted-zone
+  name         = "devopsarrow.com."   // write your hosted-zone (devopsarrow.com.)
   private_zone = false
 }
 
