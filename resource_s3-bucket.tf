@@ -1,7 +1,7 @@
 // https://registry.terraform.io/providers/hashicorp/aws/latest/docs/resources/s3_bucket
 resource "aws_s3_bucket" "kittens-bucket" {
   bucket        = var.bucket-name
-  force_destroy = true // Default:false,  Normally it must be false. Because if we delete s3 mistakenly, we loose all of the states.
+  force_destroy = true // Default:false,  Normally/best practice it must be false. Because if we delete s3 mistakenly, we loose all of the states.
 }
 
 
@@ -70,8 +70,8 @@ data "aws_iam_policy_document" "allow_access" {
       identifiers = ["*"]
     }
     resources = [
-      "${aws_s3_bucket.kittens-bucket.arn}/*" // "arn:aws:s3:::${aws_s3_bucket.kittens-bucket.bucket}/*"
-      //  "arn:aws:s3:::${aws_s3_bucket.kittens-bucket.id}/*"
+      "${aws_s3_bucket.kittens-bucket.arn}/*" // OR   "arn:aws:s3:::${aws_s3_bucket.kittens-bucket.bucket}/*"
+      // OR     "arn:aws:s3:::${aws_s3_bucket.kittens-bucket.id}/*"
     ]
   }
 }
