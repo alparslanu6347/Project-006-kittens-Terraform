@@ -6,7 +6,7 @@ variable "domain" {
 
 
 variable "bucket-name" {
-  default     = "kittens.devopsarrow.com"   // write your static website bucket-name (kittens.devopsarrow.com)
+  default     = "kittens.devopsarrow.com"   // write your static website bucket-name
   type        = string
   description = "The name of the bucket without the www. prefix. Normally domain_name."
 }
