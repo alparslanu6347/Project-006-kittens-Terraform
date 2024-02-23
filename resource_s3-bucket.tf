@@ -14,7 +14,7 @@ resource "aws_s3_bucket_website_configuration" "website-config" {
   }
 
   error_document {
-    key = "index.html"
+    key = "index.html"  
   }
 }
 

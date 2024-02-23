@@ -51,7 +51,7 @@ resource "aws_cloudfront_distribution" "kittens-distribution" {
 
 
   viewer_certificate {
-    acm_certificate_arn = "arn:aws:acm:us-east-1:377346128947:certificate/3e3bdfc2-8331-4a00-a597-8e387888f704"
+    acm_certificate_arn = "arn:aws:acm:us-east-1:377346128947:certificate/3e3bdfc2-8331-4a00-a597-8e387888f704" # write yours
     ssl_support_method  = "sni-only"
   }
 }
